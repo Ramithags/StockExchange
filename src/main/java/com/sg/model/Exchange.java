@@ -14,9 +14,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Exchange {
 
     @Id
-    String symbol;
-
-    @JsonProperty("name")
     String name;
 
     @JsonProperty("latestPrice")

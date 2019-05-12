@@ -25,11 +25,10 @@ public class ExchangeController {
     private ExchangeService exchangeService;
 
 
-    @RequestMapping(value = "/stocks/{symbol}", method = RequestMethod.GET, produces = "application/json")
+    @GetMapping("/stocks/{symbol}")
     @ResponseStatus(OK)
-    public ResponseEntity<Exchange> getCurrencyDetails(@PathVariable String symbol) {
+    public ResponseEntity<Exchange> getExchangeDetails(@PathVariable String symbol) {
+        logger.debug("Stock exchange symbol", symbol);
         return status(OK).body(exchangeService.getCurrencyRates(symbol));
     }
-
-
 }
