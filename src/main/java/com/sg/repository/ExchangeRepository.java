@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ExchangeRepository extends MongoRepository<Exchange, String> {
-    Exchange findBySymbol(String symbol);
+    Exchange findByName(String name);
 }

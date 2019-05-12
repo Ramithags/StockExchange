@@ -29,17 +29,18 @@ public class ExchangeService {
     private RestClient restClient;
 
     public Exchange getCurrencyRates(String exchangeSymbol) {
-        Exchange exchangeResponse = exchangeRepository.findBySymbol(exchangeSymbol.toUpperCase());
+        Exchange exchangeResponse = exchangeRepository.findByName(exchangeSymbol.toUpperCase());
         if (exchangeResponse != null) {
-            return exchangeRepository.findBySymbol(exchangeSymbol.toUpperCase());
+            return exchangeRepository.findByName(exchangeSymbol.toUpperCase());
         } else {
+            // TODO check and through valid error
             System.out.println("Not found");
         }
-        return exchangeResponse;
+        return null;
     }
 
     @Scheduled(fixedRate = 60000)
-    public void updateStockQuotes() {
+    public void updateExchangeRates() {
         restClient = new RestClient();
         JsonParser jsonParser = new JsonParser();
         JsonElement element = jsonParser.parse(restClient.get());
@@ -51,13 +52,19 @@ public class ExchangeService {
         }
     }
 
+    /**
+     * Method will help to store the data which is recieved from the Stock exchange API
+     *
+     * @param exchange Jsonobject which is extracted from the API.
+     */
     private void persistData(JsonObject exchange) {
+        logger.debug("Refreshed data", exchange.get("symbol").getAsString());
         Exchange exchangeData = new Exchange();
-        exchangeData.setSymbol(exchange.get("symbol").getAsString());
-        exchangeData.setName(exchange.get("companyName").getAsString());
+        exchangeData.setName(exchange.get("symbol").getAsString());
         exchangeData.setLatestPrice(exchange.get("latestPrice").getAsDouble());
         exchangeData.setPreviousClose(exchange.get("previousClose").getAsDouble());
         exchangeRepository.save(exchangeData);
+        logger.debug("Get Symbol data", exchangeRepository.findByName("GOOGL"));
     }
 
 }
