@@ -1,0 +1,6 @@
+
+Csquid:S34572"%String contains no format specifiers.(ÿÚ¢è8€’‚Âª-
+ksquid:UselessImportCheck"@Remove this unused import 'org.springframework.http.HttpEntity'.(ÂéŽÓ8«ÊûÂª-
+usquid:S3008"RRename this field "API_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ð÷¾ùÿÿÿÿ8€’‚Âª-
+[
+squid:S106&"9Replace this use of System.out or System.err by a logger.(«†’˜øÿÿÿÿ8€’‚Âª-
