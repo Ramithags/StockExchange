@@ -24,7 +24,7 @@ cache:
 
 
 notifications:
-  email: ramith.gs@gmail.com
+  email: ramitha.gs@gmail.com
   slack:
     on_success: always
     on_failure: always
