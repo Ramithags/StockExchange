@@ -24,7 +24,7 @@ public class RestClient {
 
     public String get() {
         HttpEntity<String> requestEntity = new HttpEntity<>("", headers);
-        ResponseEntity<String> responseEntity = rest.exchange(EXCHANGE_API + "symbols="+EXCHANGE_SYMBOL+"&types=quote", HttpMethod.GET, requestEntity, String.class);
+        ResponseEntity<String> responseEntity = rest.exchange(EXCHANGE_API + "symbols=" + EXCHANGE_SYMBOL + "&types=quote", HttpMethod.GET, requestEntity, String.class);
         this.setStatus(responseEntity.getStatusCode());
         return responseEntity.getBody();
     }

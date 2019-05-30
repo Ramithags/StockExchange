@@ -42,4 +42,3 @@ Design pattern
 - [ ] Code Coverage
 - [ ] Sonarqube/CodeClimate
 - [ ] Check for gradle build system
-
