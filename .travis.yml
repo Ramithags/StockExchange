@@ -5,7 +5,7 @@ services:
   - docker
 
 script:
-  - ./mvnw clean
+  - ./mvn clean
 
 
 cache:
