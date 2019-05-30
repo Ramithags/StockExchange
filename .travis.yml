@@ -5,8 +5,7 @@ services:
   - docker
 
 script:
-  - ./mvnw clean install -B
-  - ./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent
+  - ./mvnw clean
 
 
 cache:
