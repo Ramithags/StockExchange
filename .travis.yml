@@ -1,0 +1,30 @@
+sudo: required
+language: java
+jdk: oraclejdk8
+services:
+  - docker
+
+script:
+  - ./mvn clean -X
+
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
+
+
+#after_success:
+#  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+#  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH
+#    ; fi`
+#  - export IMAGE_NAME=ramith/spring-boot
+#  - docker build -t $IMAGE_NAME:$COMMIT .
+#  - docker tag $IMAGE_NAME:$COMMIT $IMAGE_NAME:$TAG
+#  - docker push $IMAGE_NAME
+
+
+notifications:
+  email: ramitha.gs@gmail.com
+  slack:
+    on_success: always
+    on_failure: always

@@ -18,7 +18,6 @@
 
     <artifactId>exchange-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
     <name>exchange-service</name>
     <description>Exchange Service</description>
 
