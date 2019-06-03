@@ -24,7 +24,7 @@ Maven
 - Junit
 - Mockito
 
-##Static code-analyser
+# Static code-analyser
 - SONAR
 
 
