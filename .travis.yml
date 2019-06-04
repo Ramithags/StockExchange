@@ -5,26 +5,16 @@ services:
   - docker
 
 script:
-  - ./mvn clean -X
-
+  - mvn clean
+  - mvn test
 cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.sonar/cache'
 
 
-#after_success:
-#  - docker login -u $DOCKER_USER -p $DOCKER_PASS
-#  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH
-#    ; fi`
-#  - export IMAGE_NAME=ramith/spring-boot
-#  - docker build -t $IMAGE_NAME:$COMMIT .
-#  - docker tag $IMAGE_NAME:$COMMIT $IMAGE_NAME:$TAG
-#  - docker push $IMAGE_NAME
-
-
 notifications:
-  email: ramitha.gs@gmail.com
-  slack:
-    on_success: always
-    on_failure: always
+  email: ramith.gs@gmail.com
+    slack: pioneer-ugy5279:VyP1G0w0FfxQR7iFRUOr1ESw
+      on_success: always
+      on_failure: always
