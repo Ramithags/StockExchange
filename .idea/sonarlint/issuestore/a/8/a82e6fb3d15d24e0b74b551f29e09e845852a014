@@ -1,2 +1,2 @@
 
-Xsquid:S2094"BRemove this empty class, write its code or make it an "interface".(‡Ëú5
+Wsquid:S1118":Add a private constructor to hide the implicit public one.(‡Ëú58Ä¶Ôª-
