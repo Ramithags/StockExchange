@@ -4,6 +4,10 @@ jdk: oraclejdk8
 services:
   - docker
 
+branches:
+  only:
+    - develop
+
 script:
   - mvn clean
   - mvn test
