@@ -15,6 +15,7 @@ public class RestClient {
 
     // Exchange API which is used to get the updated stock exchange data kindly refer http://iextrading.com/ for more information
     private String EXCHANGE_API = "https://api.iextrading.com/1.0/stock/market/batch?";
+    private String EXCHANGE_API1 = "https://api.iextrading.com/1.0/stock/market/batch?";
     private RestTemplate rest;
     private HttpHeaders headers;
     private HttpStatus status;
