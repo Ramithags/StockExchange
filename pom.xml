@@ -13,6 +13,9 @@
         <junit-jupiter.version>5.3.1</junit-jupiter.version>
         <mockito-junit-jupiter.version>2.23.0</mockito-junit-jupiter.version>
         <spring-fox-validatiors.version>2.9.2</spring-fox-validatiors.version>
+        <projectlombok.version>1.18.8</projectlombok.version>
+        <junit.version>4.12</junit.version>
+        <iex.trading.version>3.3.2</iex.trading.version>
     </properties>
 
     <artifactId>exchange-service</artifactId>
@@ -57,15 +60,21 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
+            <version>${projectlombok.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>pl.zankowski</groupId>
+            <artifactId>iextrading4j-all</artifactId>
+            <version>${iex.trading.version}</version>
         </dependency>
 
     </dependencies>

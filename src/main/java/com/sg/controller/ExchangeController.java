@@ -28,7 +28,6 @@ public class ExchangeController {
     @GetMapping("/stocks/{symbol}")
     @ResponseStatus(OK)
     public ResponseEntity<Exchange> getExchangeDetails(@PathVariable String symbol) {
-        logger.debug("Stock exchange symbol", symbol);
         return status(OK).body(exchangeService.getCurrencyRates(symbol));
     }
 }
