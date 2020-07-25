@@ -24,8 +24,8 @@ public class RestClient {
     private HttpStatus status;
 
     public RestClient() {
-        this.rest = new RestTemplate();
-        this.headers = new HttpHeaders();
+        rest = new RestTemplate();
+        headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         headers.add("Accept", "*/*");
     }

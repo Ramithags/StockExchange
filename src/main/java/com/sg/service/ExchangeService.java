@@ -1,6 +1,7 @@
 package com.sg.service;
 
 import com.google.gson.JsonObject;
+import com.sg.client.Example;
 import com.sg.client.RestClient;
 import com.sg.model.Exchange;
 import com.sg.model.ExchangeRate;
@@ -36,8 +37,14 @@ public class ExchangeService {
         } else {
             logger.info("Cannot find symbol in cache");
         }
+
+        Example example = new Example();
+        example.setJsonBody({});
+
         return null;
     }
+
+
 
     @Scheduled(fixedRate = 60000)
     public void updateExchangeRates() throws IOException {
