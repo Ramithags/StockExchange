@@ -1,5 +1,8 @@
 
-[
-squid:S106%"9Replace this use of System.out or System.err by a logger.(«†’˜øÿÿÿÿ8ŠÆÕª-
-Usquid:S1135$"2Complete the task associated to this TODO comment.(¤‰çùÿÿÿÿ8¸¯üÙª-
-Hsquid:S3457="%String contains no format specifiers.(õù¯ôÿÿÿÿÿ8áßÛª-
+G
+java:S3457C"%String contains no format specifiers.(‘™ÿ›ÿÿÿÿÿ8‡©šº¸.
+T
+java:S1135$"2Complete the task associated to this TODO comment.(¤‰çùÿÿÿÿ8‡©šº¸.
+Z	java:S106%"9Replace this use of System.out or System.err by a logger.(«†’˜øÿÿÿÿ8‡©šº¸.
+G
+java:S3457="%String contains no format specifiers.(õù¯ôÿÿÿÿÿ8‡©šº¸.
