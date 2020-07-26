@@ -5,8 +5,8 @@ services:
   - docker
 
 script:
-  - mvn clean
-  - mvn test
+  - gradle clean
+  - gradle test
 cache:
   directories:
     - '$HOME/.m2/repository'

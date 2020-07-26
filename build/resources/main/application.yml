@@ -1,0 +1,11 @@
+server:
+  port: 8070
+  servlet:
+    contextPath: /api/v1
+
+management:
+  endpoints:
+    web:
+      base-path: "/exchange"
+  server:
+    port: 8570
