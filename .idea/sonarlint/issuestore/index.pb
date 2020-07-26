@@ -1,6 +1,4 @@
 
-7
-pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 U
 %src/main/java/com/sg/Application.java,f/0/f0ed8b09486fd89cf2eb066911144c2ff71f4f88
 g
@@ -28,3 +26,11 @@ G
 .travis.yml,d/e/dea01dd89a3b602828e630677fde5d77c06441c8
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+?
+settings.gradle,0/5/05efc8b1657769a27696d478ded1e95f38737233
+<
+.whitesource,f/e/fea6cb0b6ce782575f6fd6edba922d88089b6821
+<
+build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
+D
+.circleci/config.yml,f/d/fd5da61396a8376845bee5cdf71aaf3c98a888ae
