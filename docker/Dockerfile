@@ -1,5 +1,5 @@
 #Base image with Java runtime
-FROM openjdk:8-jdk-alpine
+FROM openjdk:17-jdk-alpine
 
 # Add a volume pointing to /tmp
 VOLUME /tmp
@@ -10,8 +10,3 @@ ADD ${JAR_FILE} statements-service.jar
 
 # Run the jar
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom","-jar","/exchange-service.jar"]
-
-
-FROM penjdk:8-jdk-alpine
-
-VOLUME /tmp
